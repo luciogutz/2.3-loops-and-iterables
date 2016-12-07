@@ -68,7 +68,7 @@ function capitalizeAll(sentence){
 
       }
       return sentenceCap;
-      
+
 }
 
 
@@ -77,6 +77,19 @@ console.assert(capitalizeAll('every day is like sunday.') === 'Every Day Is Like
 // PART 3: write a function called properSentences(). It should take as input a string and capitalize the first letter of every sentence in that string. (For our purposes, all sentences will end with periods. Write one that works with ? and ! and receive a gratifying high five, right on the hand!)
 
 var paragraph = 'it was a fine morning. the wine was good. light slanted in through the cafe window.'
+
+
+function properSentences(paragraph){
+
+    var paragraphArray = paragraph.split(".");
+
+    for (var i = 0; i < paragraphArray.length; i++){
+
+      
+    }
+console.log(paragraphArray);
+}
+
 
 console.assert(properSentences(paragraph) === "It was a fine morning. The wine was good. Light slanted in through the cafe window.")
 
