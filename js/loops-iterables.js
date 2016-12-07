@@ -18,6 +18,24 @@ console.assert(squareDance([3,6,9,3])[0] === 9)
 
 // PART 1: write a function called nicer(). It should clean up the language in its input sentence.
 
+
+function nicer(sentence){
+    var sentenceArray = sentence.split(" ");
+    var removeWordsArray = ["heck", "darn", "crappy", "dang"];
+
+    for (var i = 0; i < sentenceArray.length; i++){
+
+      var currentWord = sentenceArray[i];
+      if (currentWord === "heck" || currentWord === "darn" || currentWord === "crappy" || currentWord === "dang") {
+        // remove from my array currentWord
+        sentenceArray.splice(i, 1);
+      }
+
+    }
+    var cleanSentence = sentenceArray.join(" ");
+    return cleanSentence;
+}
+
 console.assert(nicer("dad get the heck in here and bring me a darn sandwich.") === "dad get the in here and bring me a sandwich.")
 
 console.assert(nicer("here son, your crappy sandwich is on the dang plate.") === "here son, your sandwich is on the plate.")
