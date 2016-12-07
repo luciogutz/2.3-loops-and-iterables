@@ -1,4 +1,16 @@
 // PART 0: Write a function called squareDance() that squares each number in an array.
+function squareDance(numbersArray){
+    // var squaredNumber = Math.pow(numbersArray[1], 2);
+    for(var i = 0; i < numbersArray.length; i++){
+
+    var currentNumber = numbersArray[i];
+    // square the current nnumber and set it back (replace existing) to array
+    numbersArray[i] = Math.pow(currentNumber, 2);
+    }
+
+    return numbersArray;
+}
+
 
 console.assert(squareDance([1, 2])[1] === 4)
 console.assert(squareDance([5,10,15])[2] === 225)
@@ -12,7 +24,7 @@ console.assert(nicer("here son, your crappy sandwich is on the dang plate.") ===
 
 // PART 2: write a function called capitalizeAll(). It should take as input a sentence and capitalize the first letter of every word in the sentence.
 
-console.assert(capitalizeAll('every day is like sunday.') === 'Every Day Is Like Sunday.'))
+console.assert(capitalizeAll('every day is like sunday.') === 'Every Day Is Like Sunday.')
 
 // PART 3: write a function called properSentences(). It should take as input a string and capitalize the first letter of every sentence in that string. (For our purposes, all sentences will end with periods. Write one that works with ? and ! and receive a gratifying high five, right on the hand!)
 
