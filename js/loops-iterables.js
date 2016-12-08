@@ -85,11 +85,12 @@ function properSentences(paragraph){
 
     for (var i = 0; i < paragraphArray.length; i++){
         var currentSentence = paragraphArray[i];
-        var sentenceWordsArray = currentSentence.split(" ");
-        var currentwordArray = sentenceWordsArray[i];
-
+        var firstLetter = currentSentence.charAt(0).toUpperCase();
+        currentSentence.splice(0, 2);
+        // var combineFirstLetter = paragraphArray.splice(0, 3, capFirstLetter);
+  console.log(currentSentence);
     }
-    console.log(currentSentence);
+
 
 }
 
