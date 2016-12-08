@@ -80,14 +80,17 @@ var paragraph = 'it was a fine morning. the wine was good. light slanted in thro
 
 
 function properSentences(paragraph){
-
-    var paragraphArray = paragraph.split(".");
+    var capParagraph = "";
+    var paragraphArray = paragraph.split(". ");
 
     for (var i = 0; i < paragraphArray.length; i++){
+        var currentSentence = paragraphArray[i];
+        var sentenceWordsArray = currentSentence.split(" ");
+        var currentwordArray = sentenceWordsArray[i];
 
-      
     }
-console.log(paragraphArray);
+    console.log(currentSentence);
+
 }
 
 
