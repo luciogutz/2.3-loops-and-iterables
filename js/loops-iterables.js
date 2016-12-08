@@ -85,19 +85,21 @@ function properSentences(paragraph){
 
     for (var i = 0; i < paragraphArray.length; i++){
         var currentSentence = paragraphArray[i];
+        var noFirstLetterSentence = currentSentence.slice(1)
         var firstLetter = currentSentence.charAt(0).toUpperCase();
-        currentSentence.splice(0, 2);
-        // var combineFirstLetter = paragraphArray.splice(0, 3, capFirstLetter);
-  console.log(currentSentence);
+        var capParagraph = firstLetter.concat(noFirstLetterSentence);
+
+        console.log(capParagraph);
+// I was able to achieve the deesired output, but im sure I need an if statement
     }
-
-
 }
 
 
 console.assert(properSentences(paragraph) === "It was a fine morning. The wine was good. Light slanted in through the cafe window.")
 
 // PART 4: write a function called iPutTheFunIn(). It should take a string as input. The output should be a copy of the original string with the word 'fun' inserted into the center of the string.
+
+
 
 console.assert(iPutTheFunIn("funerary") === "funefunrary")
 console.assert(iPutTheFunIn("reds") === "refunds")
